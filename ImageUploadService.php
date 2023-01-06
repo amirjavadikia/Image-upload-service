@@ -38,7 +38,7 @@ class ImageUploadService
         }
     }
 
-    public function updateImage($imageModel, $refImage , $refModel,$fileRequest)
+    public static function updateImage($imageModel, $refImage , $refModel,$fileRequest)
     {
         $imageRef = $imageModel::where($refImage, $refModel->id)->where('id', $fileRequest)->first();
 
