@@ -27,7 +27,7 @@ class ImageUploadService
                 return redirect()->back()->with('error', 'Image size is more than 2 mg');
             }
         }
-        $file->move("image/store/", $image_name);
+        $file->move("image/example/", $image_name);
 
         $result = $ImageModel::create([
             'image' => $image_name
